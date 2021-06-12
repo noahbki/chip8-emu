@@ -27,11 +27,14 @@ void Application::create(int width, int height, const char* title)
     m_title = title;
 
     // FIXME: Error handling.
-    SDL_Init(SDL_INIT_VIDEO);
-    m_window = SDL_CreateWindow(m_title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 
-        m_width, m_height, 0);
+    // SDL_Init(SDL_INIT_VIDEO);
+    // m_window = SDL_CreateWindow(m_title, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 
+    //     m_width, m_height, 0);
 
-    SDL_DestroyWindow(m_window);
-    SDL_Quit();
+    // SDL_DestroyWindow(m_window);
+    // SDL_Quit();
 
+    CHIP8 chip;
+    chip.reset();
+    chip.run();
 }

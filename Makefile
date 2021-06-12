@@ -167,6 +167,33 @@ src/Application.cpp.s:
 	$(MAKE) -f CMakeFiles/CHIP8Emulator.dir/build.make CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.s
 .PHONY : src/Application.cpp.s
 
+src/CHIP8.o: src/CHIP8.cpp.o
+
+.PHONY : src/CHIP8.o
+
+# target to build an object file
+src/CHIP8.cpp.o:
+	$(MAKE) -f CMakeFiles/CHIP8Emulator.dir/build.make CMakeFiles/CHIP8Emulator.dir/src/CHIP8.cpp.o
+.PHONY : src/CHIP8.cpp.o
+
+src/CHIP8.i: src/CHIP8.cpp.i
+
+.PHONY : src/CHIP8.i
+
+# target to preprocess a source file
+src/CHIP8.cpp.i:
+	$(MAKE) -f CMakeFiles/CHIP8Emulator.dir/build.make CMakeFiles/CHIP8Emulator.dir/src/CHIP8.cpp.i
+.PHONY : src/CHIP8.cpp.i
+
+src/CHIP8.s: src/CHIP8.cpp.s
+
+.PHONY : src/CHIP8.s
+
+# target to generate assembly for a file
+src/CHIP8.cpp.s:
+	$(MAKE) -f CMakeFiles/CHIP8Emulator.dir/build.make CMakeFiles/CHIP8Emulator.dir/src/CHIP8.cpp.s
+.PHONY : src/CHIP8.cpp.s
+
 src/Logger.o: src/Logger.cpp.o
 
 .PHONY : src/Logger.o
@@ -233,6 +260,9 @@ help:
 	@echo "... src/Application.o"
 	@echo "... src/Application.i"
 	@echo "... src/Application.s"
+	@echo "... src/CHIP8.o"
+	@echo "... src/CHIP8.i"
+	@echo "... src/CHIP8.s"
 	@echo "... src/Logger.o"
 	@echo "... src/Logger.i"
 	@echo "... src/Logger.s"

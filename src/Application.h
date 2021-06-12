@@ -2,6 +2,8 @@
 
 #include <SDL.h>
 
+#include "CHIP8.h"
+
 class Application {
 public:
     void create(int width, int height, const char* title);

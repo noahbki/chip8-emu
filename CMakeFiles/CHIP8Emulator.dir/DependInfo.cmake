@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/noah/dev/chip8-emu/src/Application.cpp" "/Users/noah/dev/chip8-emu/CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o"
+  "/Users/noah/dev/chip8-emu/src/CHIP8.cpp" "/Users/noah/dev/chip8-emu/CMakeFiles/CHIP8Emulator.dir/src/CHIP8.cpp.o"
   "/Users/noah/dev/chip8-emu/src/Logger.cpp" "/Users/noah/dev/chip8-emu/CMakeFiles/CHIP8Emulator.dir/src/Logger.cpp.o"
   "/Users/noah/dev/chip8-emu/src/main.cpp" "/Users/noah/dev/chip8-emu/CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o"
   )

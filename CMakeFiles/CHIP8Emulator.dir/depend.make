@@ -3,6 +3,8 @@
 
 CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: src/Application.cpp
 CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: src/Application.h
+CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: src/CHIP8.h
+CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: src/Logger.h
 CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL.h
 CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_assert.h
 CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_atomic.h
@@ -50,9 +52,61 @@ CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: /usr/local/Cellar/sdl2/2.0.1
 CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/begin_code.h
 CMakeFiles/CHIP8Emulator.dir/src/Application.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/close_code.h
 
+CMakeFiles/CHIP8Emulator.dir/src/CHIP8.cpp.o: src/CHIP8.cpp
+CMakeFiles/CHIP8Emulator.dir/src/CHIP8.cpp.o: src/CHIP8.h
+CMakeFiles/CHIP8Emulator.dir/src/CHIP8.cpp.o: src/Logger.h
+
 CMakeFiles/CHIP8Emulator.dir/src/Logger.cpp.o: src/Logger.cpp
 CMakeFiles/CHIP8Emulator.dir/src/Logger.cpp.o: src/Logger.h
 
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: src/Application.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: src/CHIP8.h
 CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: src/Logger.h
 CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_assert.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_atomic.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_audio.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_blendmode.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_clipboard.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_config.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_cpuinfo.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_endian.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_error.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_events.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_filesystem.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_gamecontroller.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_gesture.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_haptic.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_hints.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_joystick.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_keyboard.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_keycode.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_loadso.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_log.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_main.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_messagebox.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_metal.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_mouse.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_mutex.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_pixels.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_platform.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_power.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_quit.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_rect.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_render.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_rwops.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_scancode.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_sensor.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_shape.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_stdinc.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_surface.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_system.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_thread.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_timer.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_touch.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_version.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/SDL_video.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/begin_code.h
+CMakeFiles/CHIP8Emulator.dir/src/main.cpp.o: /usr/local/Cellar/sdl2/2.0.12_1/include/SDL2/close_code.h
 
