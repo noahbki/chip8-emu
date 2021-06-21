@@ -34,7 +34,7 @@ void CHIP8::decode_opcode(WORD opcode)
             switch (opcode)
             {
                 case 0x00E0:
-                    // m_monitor.clear();
+                    clear_screen();
                     break; // CLEAR SCREEN
                 case 0x0EE: // RETURN SUBROUTINE
                     m_stack.pop_back();
@@ -154,7 +154,24 @@ void CHIP8::decode_opcode(WORD opcode)
 
         case 0xD000: { // DRAW CALLS
             BYTE n = (opcode & 0x000F);
-            // FIXME: Implement...
+            int width = 8;
+            int height = (opcode & 0xF);
+            
+            m_registers[0xF] = 0;
+
+            for (unsigned int y = 0; y < height; y++)
+            {
+                BYTE sprite = m_memory[m_addressI + y];
+                for (unsigned int x = 0; x < width; x++)
+                {
+                    if ((sprite & 0x80) > 0)
+                    {
+                        if (set_pixel(m_registers[vx] + x, m_registers[vy] + y))
+                            m_registers[0xF] = 1;
+                    }
+                    sprite <<= 1;
+                }
+            }
             break;
         }
         
@@ -201,7 +218,7 @@ void CHIP8::decode_opcode(WORD opcode)
                 }
 
                 case 0x0029: { // SET I = Address of Hexadecimal font for x
-                    // FIXME: Implement...
+                    m_addressI = m_registers[vx] * 5;
                     break;
                 }
 
@@ -234,7 +251,21 @@ void CHIP8::decode_opcode(WORD opcode)
 
 void CHIP8::run()
 {
-    while (true) {
+    SDL_Init(SDL_INIT_VIDEO);
+    SDL_Window* window = SDL_CreateWindow("CHIP-8 Emulator", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+        64 * 8, 32 * 8, 0);
+    
+    if (window == NULL) {
+        Logger::the()->log(LogLevel::FATAL, "Could not init SDL or Window!");
+        return;
+    }
+
+    SDL_Surface* surface = SDL_GetWindowSurface(window);
+
+    SDL_Event event;
+
+    while (true)
+    {
         m_running = true;
         if (m_running)
         {   
@@ -247,6 +278,47 @@ void CHIP8::run()
 
             // FIXME: Temporary
             std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        }
+
+        while (SDL_PollEvent(&event) != 0)
+        {
+            if (event.type == SDL_QUIT)
+            {
+                SDL_DestroyWindow(window);
+            }
+        }
+
+        for (int x = 0; x < 64; x++)
+        {
+            for (int y = 0; y < 32; y++)
+            {
+                const SDL_Rect rect { x * 8, y * 8, 8, 8 };
+                if (m_display[x][y] != 0)
+                    SDL_FillRect(surface, &rect, SDL_MapRGB(surface->format, 255, 255, 255));
+                else
+                    SDL_FillRect(surface, &rect, SDL_MapRGB(surface->format, 0, 0, 0));
+            }
+        }
+    }
+}
+
+bool CHIP8::set_pixel(unsigned int x, unsigned int y)
+{
+    if (x >= 64) x = x % 64;
+    if (x < 0) x = 64 - (x % 64);
+    if (y >= 32) y = y % 32;
+    if (y < 0) y = 32 - (y % 32);
+
+    Logger::the()->log("Set pixel at: " + std::to_string(x) + ", " + std::to_string(y));
+
+    m_display[x][y] ^= 1;
+    return m_display[x][y] != 1;
+}
+
+void CHIP8::clear_screen() {
+    for (int x = 0; x < 64; x++) {
+        for (int y = 0; y < 32; y++) {
+            m_display[x][y] = 0;
         }
     }
 }

@@ -4,6 +4,7 @@
 #include <cstring>
 #include <cstdio>
 #include <iomanip>
+#include <SDL.h>
 #include <thread>
 #include <vector>
 
@@ -35,4 +36,6 @@ private:
 
     WORD next_opcode(); 
     void decode_opcode(WORD);
+    bool set_pixel(unsigned int x, unsigned int y);
+    void clear_screen();
 };
